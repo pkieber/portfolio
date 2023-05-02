@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    /*font-family: 'Open Sans', sans-serif;*/
+    background-color: #141D2F;
+    color: #FFFFFF;
+    /*color: #4B47FF;*/
+    /*color: #1CE6B6;*/
+}
+
+button {
+    background-color: #00BEE8;
+    height: 58px;
+    padding: 15px, 30px, 15px, 30px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+}
+
