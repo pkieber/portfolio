@@ -1,0 +1,39 @@
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 50px;
+    font-family: 'Poppins', 'sans-serif';
+
+    img {
+        height: 100px;
+        cursor: pointer;
+    }
+
+    .skills-left {
+    }
+
+    .skills-right {
+    }
+}
+
+h2 {
+    font-size: 90px;
+    position: relative;
+}
+
+h2:after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 5px;
+    background: #701937;
+    right: 0;
+    top: 50%;
+    position: absolute;
+}

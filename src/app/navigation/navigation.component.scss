@@ -1,13 +1,13 @@
-header {
+.nav-container {
     /*position: sticky;
     left: 0;
     right: 0; 
     top: 0; */
+    height: 80px;
     z-index: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
     padding-left: 120px;
     padding-right: 120px;
     width: 100%;
@@ -29,36 +29,4 @@ header {
         height: 30px;
         cursor: pointer;
     }
-}
-
-.title-rotate {
-    transform: rotateZ(-90deg);
-    color:rgba(255, 255, 255, 0.8);
-    font-size: 90px;
-    font-weight: 400;
-}
-
-.header-container {
-    display: flex;
-}
-
-.title-container {
-    display: flex;
-}
-
-.title-name {
-    color:rgba(255, 255, 255, 0.8);
-    font-size: 114px;
-    font-weight: 700;
-}
-
-.title-job {
-    color: #4B47FF;
-    font-size: 64px;
-    font-weight: 400;
-}
-
-.title-btn {
-    width: 165px;
-    height: 58px;
 }

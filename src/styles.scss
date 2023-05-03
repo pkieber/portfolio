@@ -1,19 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+
+html, body {
+    scroll-behavior: smooth;
+    overflow-x: hidden !important;
+}
+
+html {
+    background-color: #1e2b45;
+}
+
 body {
-    margin: 0;
-    /*font-family: 'Open Sans', sans-serif;*/
-    background-color: #141D2F;
+    max-width: 1920px;
+}
+
+* {
+    font-family: 'Poppins', 'sans-serif'!important;
+}
+/* Choose custom font-family. Add !important to overwrite all elements. */
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url(assets/fonts/Poppins/Poppins-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-BlackItalic';
+    src: url(assets/fonts/Poppins/Poppins-BlackItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(assets/fonts/Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-BoldItalic';
+    src: url(assets/fonts/Poppins/Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-ExtraLight';
+    src: url(assets/fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-ExtraLightItalic';
+    src: url(assets/fonts/Poppins/Poppins-ExtraLightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Italic';
+    src: url(assets/fonts/Poppins/Poppins-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url(assets/fonts/Poppins/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-LightItalic';
+    src: url(assets/fonts/Poppins/Poppins-LightItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url(assets/fonts/Poppins/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-MediumItalic';
+    src: url(assets/fonts/Poppins/Poppins-MediumItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url(assets/fonts/Poppins/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBoldItalic';
+    src: url(assets/fonts/Poppins/Poppins-SemiBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Thin';
+    src: url(assets/fonts/Poppins/Poppins-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-ThinItalic';
+    src: url(assets/fonts/Poppins/Poppins-ThinItalic.ttf);
+}
+
+body {
+    margin: 0px;
     color: #FFFFFF;
     /*color: #4B47FF;*/
     /*color: #1CE6B6;*/
+    user-select: none;
+}
+
+:root {
+    --primary: #141D2F;
+    --secondary: #4B47FF;
+    --tertiary: #1CE6B6;
+    --quarternary: #101623; 
 }
 
 button {
     background-color: #00BEE8;
+    color: #FFFFFF;
     height: 58px;
+    font-weight: 400;
+    font-size: 23px;
     padding: 15px, 30px, 15px, 30px;
     gap: 10px;
     border-radius: 10px;
     box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+    cursor: pointer;
 }
-

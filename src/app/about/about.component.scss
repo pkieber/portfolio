@@ -1,0 +1,32 @@
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    background-color: #141D2F; /* Overwrites HTML-bg */
+
+    .about-left {
+        width: calc(20% + 200px);
+    }
+
+    .about-right {
+        width: calc(20% + 200px);
+    }
+}
+
+h2 {
+    font-size: 90px;
+}
+
+.about-profile {
+    height: 400px;
+}
+
+.about-icons {
+    height: 50px;
+}
