@@ -1,17 +1,11 @@
 header {
-    /*position: sticky;
-    left: 0;
-    right: 0; 
-    top: 0; */
-    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
     padding-left: 120px;
     padding-right: 120px;
-    width: 100%;
-    box-sizing: border-box;
     background-color: #141D2F; /* Overwrites HTML-bg */
 
     a {
@@ -29,6 +23,20 @@ header {
         height: 30px;
         cursor: pointer;
     }
+
+    h1 {
+        margin: 0;
+    }
+}
+
+.header-container {
+    padding: 80px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .title-rotate {
@@ -36,14 +44,6 @@ header {
     color:rgba(255, 255, 255, 0.8);
     font-size: 90px;
     font-weight: 400;
-}
-
-.header-container {
-    display: flex;
-}
-
-.title-container {
-    display: flex;
 }
 
 .title-name {

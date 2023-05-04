@@ -9,18 +9,24 @@
     box-sizing: border-box;
     gap: 20px;
     background-color: #141D2F; /* Overwrites HTML-bg */
-
-    .about-left {
-        width: calc(20% + 200px);
-    }
-
-    .about-right {
-        width: calc(20% + 200px);
-    }
 }
 
 h2 {
     font-size: 90px;
+}
+
+.about-left {
+    /*width: calc(20% + 200px);*/
+}
+
+.about-infos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-right {
+    /*width: calc(20% + 200px);*/
 }
 
 .about-profile {
