@@ -10,3 +10,21 @@
 h2 {
     font-size: 90px;
 }
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img-container {
+    padding: 10px;
+    margin: 10px;
+
+    img {
+        width: 550px;
+        height: auto;
+        padding: 30px;
+    }
+}
