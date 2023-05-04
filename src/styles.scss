@@ -9,7 +9,34 @@ html {
 }
 
 body {
+    margin: 0px;
+    color: #FFFFFF;
     max-width: 1920px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+
+}
+
+:root {
+    --primary: #141D2F;
+    --secondary: #4B47FF;
+    --tertiary: #1CE6B6;
+    --quarternary: #101623; 
+}
+
+button {
+    background-color: #00BEE8;
+    color: #FFFFFF;
+    height: 58px;
+    font-weight: 400;
+    font-size: 23px;
+    padding: 15px, 30px, 15px, 30px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
+    cursor: pointer;
 }
 
 * {
@@ -95,32 +122,4 @@ body {
 @font-face {
     font-family: 'Poppins-ThinItalic';
     src: url(assets/fonts/Poppins/Poppins-ThinItalic.ttf);
-}
-
-body {
-    margin: 0px;
-    color: #FFFFFF;
-    /*color: #4B47FF;*/
-    /*color: #1CE6B6;*/
-    user-select: none;
-}
-
-:root {
-    --primary: #141D2F;
-    --secondary: #4B47FF;
-    --tertiary: #1CE6B6;
-    --quarternary: #101623; 
-}
-
-button {
-    background-color: #00BEE8;
-    color: #FFFFFF;
-    height: 58px;
-    font-weight: 400;
-    font-size: 23px;
-    padding: 15px, 30px, 15px, 30px;
-    gap: 10px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 4px rgba(0,0,0,0.25);
-    cursor: pointer;
 }
