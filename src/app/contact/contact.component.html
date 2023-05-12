@@ -1,18 +1,18 @@
-<section id="contact" class="contact-container">
-  <h2>Contact</h2>
-  <div class="form-container">
-    <div>
-      <p>Need a Frontend developer? Contact me!</p>
+<section id="contact" class="contact-content">
+  <div class="contact-container">
+    <div class="contact-box">
+      <div class="contact-left-box">
+        <h2>Contact</h2>
+        <p>Need a Frontend developer? Contact me!</p>
+      </div>
     </div>
-    <div>
-
-      <form (submit)="sendMail()" ngNativeValidate #myForm>
-        <input required type="text" name="name" placeholder="Your name" #nameField>
-        <input required type="email" placeholder="Your email" #emailField>
-        <textarea required type="text" name="message" placeholder="Your message" #messageField></textarea>
-        <button #sendButton>Send message</button>
-      </form>
-
+    <div class="contact-box">
+        <form class="contact-right-box" (submit)="sendMail()" ngNativeValidate #myForm>
+          <input required type="text" name="name" placeholder="Your name" #nameField>
+          <input required type="email" placeholder="Your email" #emailField>
+          <textarea required type="text" name="message" placeholder="Your message" #messageField></textarea>
+          <button #sendButton>Send message</button>
+        </form>
     </div>
   </div>
 </section>

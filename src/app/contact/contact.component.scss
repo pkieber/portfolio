@@ -1,3 +1,67 @@
+.contact-content {
+  padding: 60px 120px 60px 120px;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: 1000px) {
+    padding: 60px 50px 60px 50px;
+  }
+}
+
+h2 {
+  font-size: 90px;
+  margin: 0;
+  white-space: nowrap; /* prevent the text from wrapping */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    display: flex;
+  }
+}
+
+.contact-box {
+  width: calc(50% - 20px); /* 50% (2 columns) - gap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 800px) {
+    width: calc(100%);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+input, textarea {
+  width: calc(100% - 20px);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  width: 250px;
+}
+
+
+
+/*
+
 .contact-container {
     padding: 60px 120px 60px 120px;
     width: 100%;
@@ -39,3 +103,4 @@ textarea {
 button {
   width: 250px;
 }
+*/
