@@ -32,5 +32,15 @@
     img {
         height: 35px;
         cursor: pointer;
+
+        @media (max-width: 930px) {
+          height: 25px;
+        }
     }
+}
+
+.mobile-hidden {
+  @media (max-width: 930px) {
+    display: none;
+  }
 }

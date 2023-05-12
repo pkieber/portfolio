@@ -3,21 +3,21 @@ header {
     flex-direction: column;
     align-items: center;
     z-index: 1;
-    padding: 60px 120px 60px 120px;
+    padding: 120px 120px 60px 120px;
     background-color: #141D2F; /* Overwrites HTML-bg */
 
     @media (max-width: 930px) {
-      padding: 60px 50px 60px 50px;
+      padding: 100px 50px 60px 50px;
     }
 }
 
 .header-content {
-  padding: 60px 120px 60px 120px;
+  /*padding: 120px 120px 60px 120px;*/
   width: 100%;
   box-sizing: border-box;
 
   @media (max-width: 1000px) {
-    padding: 60px 50px 60px 50px;
+    /*padding: 100px 50px 60px 50px;*/
   }
 }
 
@@ -76,7 +76,7 @@ header {
 }
 
 .header-social {
-  width: calc(20% + 30px);
+  width: 180px;
   display: flex;
   justify-content: space-between;
   padding: 0px 0px 0px 120px;

@@ -36,6 +36,7 @@ h2 {
 .project-box {
   width: calc(50% - 20px); /* 50% (2 columns) - gap */
   border: 2px solid #1CE6B6;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
