@@ -9,65 +9,98 @@ header {
     @media (max-width: 930px) {
       padding: 60px 50px 60px 50px;
     }
+}
 
-    a {
-        color: white;
-        text-decoration: none;
-        margin-left: 32px;
-        font-weight: 500;
+.header-content {
+  padding: 60px 120px 60px 120px;
+  width: 100%;
+  box-sizing: border-box;
 
-        &:hover {
-            color: rgba(255, 255, 255, 0.8)
-        }
-    }
-
-    img {
-        height: 30px;
-        cursor: pointer;
-    }
-
-    h1 {
-        margin: 0;
-    }
-
-    h2 {
-        margin: 0;
-    }
+  @media (max-width: 1000px) {
+    padding: 60px 50px 60px 50px;
+  }
 }
 
 .header-container {
-    padding: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+  width: 100%;
+
+  @media (max-width: 800px) {
+    padding: 20px;
+  }
 }
 
-table {
+.table {
+  width: calc(80% - 20px); /* 50% (2 columns) - gap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 800px) {
+    width: calc(100%);
+  }
 }
 
 .title-rotate {
     transform: rotate(-90deg);
     color:rgba(255, 255, 255, 0.8);
-    font-size: 85px;
+    font-size: clamp(1.78125rem, 0.3272rem + 6.6471vw, 5.3125rem); /* 85px @1200 - 28.5px @350 */
     font-weight: 400;
-    white-space: nowrap; /* prevent the text from wrapping */
-    line-height: 1; /* set the line spacing to the minimum value */
-}
+    white-space: nowrap;
+    line-height: 1;
+  }
 
 
 .title-name {
     color:rgba(255, 255, 255, 0.8);
     font-size: 114px;
     font-weight: 700;
-    white-space: nowrap; /* prevent the text from wrapping */
-    line-height: 1.2; /* set the line spacing to the minimum value */
+    font-size: clamp(2.375rem, 0.4191rem + 8.9412vw, 7.125rem); /* 114px @1200 - 38px @350 */
+    white-space: nowrap;
+    line-height: 1.2;
 }
 
 .title-job {
     color: #4B47FF;
     font-size: 64px;
+    font-size: clamp(1.3125rem, 0.2059rem + 5.0588vw, 4rem); /* 64px @1200 - 21px @350 */
     font-weight: 400;
-    white-space: nowrap; /* prevent the text from wrapping */
+    white-space: nowrap;
 }
 
 .title-btn {
     width: 165px;
     height: 58px;
+}
+
+.header-social {
+  width: calc(20% + 30px);
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 0px 0px 120px;
+
+  img {
+      height: 35px;
+      width: 35px;
+      transition: all 225ms ease-in-out;
+
+      @media (max-width: 800px) {
+          height: 30px;
+          width: 30px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
+  }
+
+  @media (max-width: 930px) {
+    padding: 0px 0px 0px 50px;
+  }
+}
+
+.bg-social {
+  background-color: #141D2F; /* Overwrites HTML-bg */
 }

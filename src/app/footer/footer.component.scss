@@ -73,8 +73,18 @@ a {
     justify-content: space-between;
 
     img {
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
+        transition: all 225ms ease-in-out;
+
+        @media (max-width: 800px) {
+          height: 30px;
+          width: 30px;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
 }
 
@@ -82,5 +92,10 @@ a {
     padding-left: 110px;
     padding-right: 110px;
     margin-block-start: 0;
+    transition: all 225ms ease-in-out;
     cursor: pointer;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
 }

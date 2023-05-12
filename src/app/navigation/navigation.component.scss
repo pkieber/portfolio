@@ -22,9 +22,10 @@
         text-decoration: none;
         margin-left: 32px;
         font-weight: 500;
+        transition: all 225ms ease-in-out;
 
         &:hover {
-            color: rgba(255, 255, 255, 0.8)
+          filter: brightness(0.8);
         }
     }
 

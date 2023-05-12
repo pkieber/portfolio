@@ -2,6 +2,7 @@
   padding: 60px 120px 60px 120px;
   width: 100%;
   box-sizing: border-box;
+  background-color: #141D2F; /* Overwrites HTML-bg */
 
   @media (max-width: 1000px) {
     padding: 60px 50px 60px 50px;
@@ -27,6 +28,7 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
+  width: 100%;
 
   @media (max-width: 800px) {
     justify-content: center;
@@ -44,6 +46,10 @@ h2 {
   @media (max-width: 800px) {
     width: calc(100%);
   }
+}
+
+.about-left-box {
+  width: 100%;
 }
 
 .about-infos {
