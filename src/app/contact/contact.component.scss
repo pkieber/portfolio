@@ -1,12 +1,41 @@
 .contact-container {
-    padding-left: 120px;
-    padding-right: 120px;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 60px 120px 60px 120px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 930px) {
+      padding: 60px 50px 60px 50px;
+    }
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 h2 {
     font-size: 90px;
+    margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input, textarea {
+  width: 500px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  width: 250px;
 }

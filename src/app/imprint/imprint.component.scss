@@ -3,4 +3,9 @@
     padding-right: 120px;
     padding-top: 120px;
     width: 100%;
+
+    @media (max-width: 930px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 }

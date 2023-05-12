@@ -11,7 +11,7 @@ html {
 body {
     margin: 0px;
     color: #FFFFFF;
-    max-width: 1920px;
+    /*max-width: 1920px;*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@ body {
     --primary: #141D2F;
     --secondary: #4B47FF;
     --tertiary: #1CE6B6;
-    --quarternary: #101623; 
+    --quarternary: #101623;
 }
 
 button {

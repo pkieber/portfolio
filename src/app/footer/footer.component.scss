@@ -20,17 +20,22 @@ footer {
     padding-left: 110px;
     padding-right: 110px;
 
+    @media (max-width: 930px) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
     a {
         color: white;
         text-decoration: none;
         margin-left: 32px;
         font-weight: 500;
-    
+
         &:hover {
             color: rgba(255, 255, 255, 0.8)
         }
     }
-    
+
     img {
         height: 30px;
         cursor: pointer;
@@ -66,7 +71,7 @@ a {
     width: calc(20% + 30px);
     display: flex;
     justify-content: space-between;
-    
+
     img {
         height: 30px;
         width: 30px;
