@@ -16,6 +16,13 @@
   }
 }
 
+.contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
 h2 {
   font-size: clamp(3.125rem, 2.0956rem + 4.7059vw, 5.625rem); /* 90px @1200 - 50px @350 */
   margin: 0;
@@ -37,7 +44,6 @@ h2 {
 .contact-box {
   width: calc(50% - 20px); /* 50% (2 columns) - gap */
   display: flex;
-  align-items: center;
 
   @media (max-width: 800px) {
     width: calc(100%);
@@ -50,6 +56,7 @@ form {
   align-items: center;
   gap: 20px;
   width: 100%;
+  position: relative;
 }
 
 input, textarea {
@@ -85,4 +92,11 @@ button {
     background-color: #4B47FF;
     transform: scale(1.2);
   }
+}
+
+.contact-scroll {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+  text-decoration: none;
 }

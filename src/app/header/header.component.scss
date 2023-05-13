@@ -115,11 +115,41 @@ header {
       }
   }
 
-  @media (max-width: 930px) {
+  @media (max-width: 1400px) {
+    padding: 0px 0px 0px 80px;
+  }
+
+  @media (max-width: 1200px) {
     padding: 0px 0px 0px 50px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0px 0px 0px 25px;
   }
 }
 
 .bg-social {
   background-color: #141D2F; /* Overwrites HTML-bg */
+  position: relative;
+}
+
+.header-scroll {
+  transform: rotate(+90deg);
+  position: absolute;
+  right: 0;
+  top: -35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+
+  img {
+    transform: rotate(-90deg);
+  }
+
+  @media (max-width: 930px) {
+    display: none;
+  }
 }
