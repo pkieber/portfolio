@@ -4,23 +4,23 @@
   box-sizing: border-box;
   background-color: #141D2F; /* Overwrites HTML-bg */
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1400px) {
+    padding: 60px 80px 60px 80px;
+  }
+
+  @media (max-width: 1200px) {
     padding: 60px 50px 60px 50px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 60px 25px 60px 25px;
   }
 }
 
 h2 {
-  font-size: 90px;
+  font-size: clamp(3.125rem, 2.0956rem + 4.7059vw, 5.625rem); /* 90px @1200 - 50px @350 */
   margin: 0;
-  white-space: nowrap; /* prevent the text from wrapping */
-
-  @media (max-width: 800px) {
-    font-size: 80px;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 70px;
-  }
+  white-space: nowrap;
 }
 
 .about-container {

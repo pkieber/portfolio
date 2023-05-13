@@ -8,22 +8,32 @@ footer {
     width: 100%;
     box-sizing: border-box;
     margin-top: auto;
-    /* height: 250px; */
 }
 
 .footer-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /*position: absolute;
-    bottom: 0;*/
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 120px;
+    padding-right: 120px;
+
+    @media (max-width: 1400px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    @media (max-width: 1200px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
 
     @media (max-width: 930px) {
-      padding-left: 40px;
-      padding-right: 40px;
       flex-direction: column;
+    }
+
+    @media (max-width: 600px) {
+      padding-left: 25px;
+      padding-right: 25px;
     }
 
     a {
@@ -94,8 +104,8 @@ a {
 }
 
 .imprint {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding-left: 120px;
+    padding-right: 120px;
     margin-block-start: 0;
     transition: all 225ms ease-in-out;
     cursor: pointer;
@@ -104,9 +114,24 @@ a {
       filter: brightness(0.8);
     }
 
+    @media (max-width: 1400px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    @media (max-width: 1200px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
     @media (max-width: 930px) {
       display: flex;
       justify-content: center;
       margin: 25px;
+    }
+
+    @media (max-width: 600px) {
+      padding-left: 25px;
+      padding-right: 25px;
     }
 }

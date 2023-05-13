@@ -12,9 +12,19 @@
     box-sizing: border-box;
     background-color: #141D2F; /* Overwrites HTML-bg */
 
-    @media (max-width: 930px) {
+    @media (max-width: 1400px) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+
+    @media (max-width: 1200px) {
       padding-left: 50px;
       padding-right: 50px;
+    }
+
+    @media (max-width: 600px) {
+      padding-left: 25px;
+      padding-right: 25px;
     }
 
     a {
