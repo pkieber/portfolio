@@ -56,6 +56,16 @@ img {
   width: 100%;
 }
 
+button {
+  width: 200px;
+  margin-top: 30px;
+  transition: all 225ms ease-in-out;
+
+  &:hover {
+    background-color: #4B47FF;
+    transform: scale(1.2);
+  }
+}
 
 .skills-left-box {
     display: grid;

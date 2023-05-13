@@ -34,8 +34,9 @@ h2 {
 }
 
 .project-box {
+  position: relative;
   width: calc(50% - 20px); /* 50% (2 columns) - gap */
-  border: 1px solid #1CE6B6;
+  border: 1px solid #00BEE8;
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -44,10 +45,78 @@ h2 {
   @media (max-width: 800px) {
     width: calc(100%);
   }
+
+  &:hover {
+  }
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
   display: block; /* remove extra space below image */
+
+  &:hover {
+    transform: scale(0.5);
+    opacity: 0.6;;
+  }
 }
+
+.project-info-container {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  padding: 30px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: black;
+}
+
+.project-btn-container {
+  display: flex;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  .btn-github {
+    width: 140px;
+    transition: all 225ms ease-in-out;
+
+    &:hover {
+      background-color: #4B47FF;
+      transform: scale(1.2);
+    }
+  }
+
+  .btn-test {
+    width: 150px;
+    transition: all 225ms ease-in-out;
+
+    &:hover {
+      background-color: #4B47FF;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.project-title {
+  color: #4B47FF;
+  font-size: 25px;
+}
+
+.project-intro {
+  font-size: 20px;
+}
+
+.project-info {
+  color: #00BEE8;
+  font-size: 20px;
+}
+
+

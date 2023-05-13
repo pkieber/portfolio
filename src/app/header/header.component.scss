@@ -7,15 +7,26 @@ header {
     background-color: #141D2F; /* Overwrites HTML-bg */
 
     @media (max-width: 1400px) {
-      padding: 60px 80px 60px 80px;
+      padding: 120px 80px 100px 80px;
     }
 
     @media (max-width: 1200px) {
-      padding: 60px 50px 60px 50px;
+      padding: 120px 50px 80px 50px;
     }
 
     @media (max-width: 600px) {
-      padding: 60px 25px 60px 25px;
+      padding: 120px 25px 60px 25px;
+    }
+
+    button {
+      width: 160px;
+      margin-top: 30px;
+      transition: all 225ms ease-in-out;
+
+      &:hover {
+        background-color: #4B47FF;
+        transform: scale(1.2);
+      }
     }
 }
 

@@ -3,7 +3,7 @@ footer {
     flex-direction: column;
     padding-bottom: 40px;
     padding-top: 80px;
-    border-top: 4px solid #1CE6B6;
+    border-top: 4px solid #00BEE8;
     z-index: 100;
     width: 100%;
     box-sizing: border-box;
@@ -112,6 +112,7 @@ a {
 
     &:hover {
       filter: brightness(0.8);
+      color: #00BEE8;
     }
 
     @media (max-width: 1400px) {

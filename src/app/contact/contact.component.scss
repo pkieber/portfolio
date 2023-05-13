@@ -54,8 +54,22 @@ form {
 
 input, textarea {
   width: calc(100% - 20px);
+  background-color: #1e2b45;
   border-radius: 10px;
   padding: 10px;
+  border: 2px solid #4B47FF;
+  outline: none;
+  transition: all 225ms ease-in-out;
+  cursor: pointer;
+  color: white !important;
+
+  &:hover {
+    border: 2px solid #1CE6B6;
+  }
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
 }
 
 textarea {
@@ -63,6 +77,12 @@ textarea {
 }
 
 button {
-  width: 250px;
+  width: 220px;
   margin-top: 30px;
+  transition: all 225ms ease-in-out;
+
+  &:hover {
+    background-color: #4B47FF;
+    transform: scale(1.2);
+  }
 }
