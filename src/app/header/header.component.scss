@@ -133,23 +133,39 @@ header {
   position: relative;
 }
 
-.header-scroll {
-  transform: rotate(+90deg);
+.scroll-down-container {
   position: absolute;
   right: 0;
-  top: -35px;
+  top: -50px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-
-  img {
-    transform: rotate(-90deg);
-  }
+  flex-direction: column;
+  gap: 40px;
 
   @media (max-width: 930px) {
     display: none;
+  }
+}
+
+.scroll-down {
+  transform: rotate(+90deg);
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.arrow-down {
+  animation: jumpInfinite 1.5s infinite;
+}
+
+@keyframes jumpInfinite {
+  0% {
+      margin-top: 0;
+  }
+  50% {
+      margin-top: 10px;
+  }
+  100% {
+      margin-top: 0;
   }
 }

@@ -100,3 +100,22 @@ button {
   margin-top: 40px;
   text-decoration: none;
 }
+
+.arrow-up {
+  display: inline;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../assets/icon/arrow-up.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: content-box;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 100%;
+  transition: all 225ms ease-in-out;
+}
+
+.arrow-up:hover {
+  background-image: url('../../assets/icon/arrow-up-hover.png');
+  border: 2px solid #00BEE8;
+}

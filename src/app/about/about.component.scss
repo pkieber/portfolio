@@ -64,6 +64,18 @@ img {
   display: block; /* remove extra space below image */
 }
 
+.bg-shape-container {
+  position: absolute;
+  top: 76%;
+  z-index: 1;
+}
+
+.bg-shape {
+  position: relative;
+  pointer-events: none;
+  min-width: 101vw;
+}
+
 /*
 .shape {
   z-index: 1;
