@@ -24,9 +24,9 @@ export class ContactComponent {
     sendButton.disabled = true;
 
     let fd = new FormData();
-    fd.append('nameField', nameField.value);
-    fd.append('emailField', nameField.value);
-    fd.append('messageFiel', messageField.value);
+    fd.append('name', nameField.value);
+    fd.append('email', nameField.value);
+    fd.append('message', messageField.value);
 
     // send email
     await fetch('https://patrick-kieber.developerakademie.net/send_mail/send_mail.php'),

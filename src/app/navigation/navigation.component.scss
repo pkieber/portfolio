@@ -38,6 +38,10 @@
           filter: brightness(0.8);
           color: #00BEE8;
         }
+
+        &:focus {
+          color: #095a6c;
+        }
     }
 
     img {
@@ -50,8 +54,77 @@
     }
 }
 
-.mobile-hidden {
+.mobile-hide {
   @media (max-width: 930px) {
     display: none;
+  }
+}
+
+.mobile-show {
+  @media (min-width: 930px) {
+    display: none;
+  }
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(17, 26, 41, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 32px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+.nav-mobile-btn {
+  position: absolute;
+  top: 25px;
+  height: 25px!important;
+
+  @media (max-width: 1200px) {
+    right: 50px;
+  }
+
+  @media (max-width: 600px) {
+    right: 25px;
   }
 }

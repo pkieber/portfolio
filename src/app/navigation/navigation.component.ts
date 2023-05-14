@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class NavigationComponent {
 
+  openNav(): void {
+    const mobileNav = document.getElementById("mobileNav") as HTMLElement;
+    mobileNav.style.width = "100%";
+  }
+
+  closeNav(): void {
+    const mobileNav = document.getElementById("mobileNav") as HTMLElement;
+    mobileNav.style.width = "0%";
+  }
 }

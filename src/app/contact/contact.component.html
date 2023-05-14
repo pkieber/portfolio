@@ -9,7 +9,7 @@
     <div class="contact-box">
         <form class="contact-right-box" (submit)="sendMail()" ngNativeValidate #myForm>
           <input required type="text" name="name" placeholder="Your name" #nameField>
-          <input required type="email" placeholder="Your email" #emailField>
+          <input required type="email" name="email" placeholder="Your email" #emailField>
           <textarea required type="text" name="message" placeholder="Your message" #messageField></textarea>
           <button #sendButton>Send message</button>
         </form>
