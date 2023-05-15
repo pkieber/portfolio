@@ -124,3 +124,18 @@ button {
     font-family: 'Poppins-ThinItalic';
     src: url(assets/fonts/Poppins/Poppins-ThinItalic.ttf);
 }
+
+/* Scrollbar CSS */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #4B47FF;
+    border-radius: 10px;
+    border: 0.5px solid rgb(27, 25, 75);
+}

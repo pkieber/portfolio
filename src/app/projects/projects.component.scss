@@ -18,8 +18,21 @@
 
 h2 {
   font-size: clamp(3.125rem, 2.0956rem + 4.7059vw, 5.625rem); /* 90px @1200 - 50px @350 */
-  margin: 0;
   white-space: nowrap;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+h2:before {
+  content: "";
+  height: 6px;
+  width: 80px;
+  background: #4B47FF;
+  position: absolute;
+  left: -100px; /* adapt to margin-left */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .project-container {
@@ -27,6 +40,7 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
+  position: relative;
 
   @media (max-width: 800px) {
     justify-content: center;
