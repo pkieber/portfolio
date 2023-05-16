@@ -12,12 +12,19 @@
   }
 }
 
+.portfolio-intro {
+  z-index: 4;
+  position: relative;
+  margin-bottom: 40px;
+}
+
 h2 {
   font-size: clamp(3.125rem, 2.0956rem + 4.7059vw, 5.625rem); /* 90px @1200 - 50px @350 */
   white-space: nowrap;
   position: relative;
   display: flex;
   align-items: center;
+  z-index: 4;
 }
 
 h2:before {
@@ -88,7 +95,6 @@ h2:before {
   &:hover {
     .hidden-info {
       display: flex;
-      gap: 30px;
     }
 
     img {
@@ -112,16 +118,22 @@ h2:before {
   align-items: center;
   background-color: white;
   color: black;
+  gap: 10px;
   z-index: 10; /* popup */
+}
+
+h3 {
+  margin: 0;
 }
 
 .project-btn-container {
   display: flex;
   position: absolute;
-  top: 40px;
+  top: 15%;
   justify-content: center;
   align-items: center;
   z-index: 10; /* popup */
+  gap: 20px;
 
   .btn-github {
     width: 140px;
@@ -150,10 +162,6 @@ h2:before {
   }
 }
 
-.hidden-info {
-  display: none;
-}
-
 .project-title {
   color: #4B47FF;
   font-size: 25px;
@@ -161,11 +169,19 @@ h2:before {
 
 .project-intro {
   font-size: 20px;
+
+  @media (max-width: 900px) {
+    font-size: unset;
+    margin: 0;
+  }
 }
 
 .project-info {
   color: #00BEE8;
   font-size: 20px;
+  margin: 0;
 }
 
-
+.hidden-info {
+  display: none;
+}
