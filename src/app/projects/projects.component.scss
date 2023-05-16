@@ -1,18 +1,14 @@
 .project-content {
-  padding: 60px 120px 60px 120px;
   width: 100%;
   box-sizing: border-box;
+  padding-inline: clamp(1.5625rem, -1.0156rem + 6.875vw, 5rem); /* 80px @1400 + 25px @350 - padding-left+right */
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background-color: #141D2F; /* Overwrites HTML-bg */
 
   @media (max-width: 1400px) {
-    padding: 60px 80px 60px 80px;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 60px 50px 60px 50px;
-  }
-
-  @media (max-width: 600px) {
-    padding: 60px 25px 60px 25px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -27,12 +23,29 @@ h2 {
 h2:before {
   content: "";
   height: 6px;
-  width: 80px;
+  width: clamp(5.625rem, 5.8333rem + -0.9524vw, 5rem); /* 80px @1400 + 90px @350px */
   background: #4B47FF;
   position: absolute;
   left: -100px; /* adapt to margin-left */
+  overflow-x: hidden;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.bg-projects-right {
+  position: absolute;
+  height: 700px;
+  right: 0;
+  margin-top: -300px;
+  overflow-x: hidden;
+}
+
+.bg-projects-left {
+  position: absolute;
+  height: 700px;
+  left: 0;
+  margin-top: 200px;
+  overflow-x: hidden;
 }
 
 .project-container {
@@ -51,6 +64,7 @@ h2:before {
 .project-box {
   position: relative;
   width: calc(50% - 20px); /* 50% (2 columns) - gap */
+  background: #141D2F;
   border: 1px solid #00BEE8;
   border-radius: 16px;
   display: flex;

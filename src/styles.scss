@@ -5,7 +5,7 @@ html, body {
 }
 
 html {
-    background-color: #1e2b45;
+    background-color: #141D2F;
 }
 
 body {
@@ -42,6 +42,7 @@ button {
 
 * {
     font-family: 'Poppins', 'sans-serif'!important;
+    z-index: 3;
 }
 /* Choose custom font-family. Add !important to overwrite all elements. */
 

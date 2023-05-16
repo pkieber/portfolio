@@ -1,19 +1,14 @@
 .about-content {
-  padding: 60px 120px 60px 120px;
   width: 100%;
   box-sizing: border-box;
+  padding-inline: clamp(1.5625rem, -1.0156rem + 6.875vw, 5rem); /* 80px @1400 + 25px @350 - padding-left + padding-right */
+  padding-top: 120px;
+  padding-bottom: 60px;
   background-color: #141D2F; /* Overwrites HTML-bg */
 
   @media (max-width: 1400px) {
-    padding: 60px 80px 60px 80px;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 60px 50px 60px 50px;
-  }
-
-  @media (max-width: 600px) {
-    padding: 60px 25px 60px 25px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -43,7 +38,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3;
+  z-index: 2;
 
   @media (max-width: 800px) {
     width: calc(100%);
@@ -67,10 +62,15 @@ img {
   z-index: 2;
 }
 
+.about-profile {
+  height: 100%;
+}
+
 .bg-about {
   display: flex;
   position: absolute;
-  right: -250px;
+  /* right: -250px; */
+  overflow-x: hidden;
   z-index: 1;
 
   @media (max-width: 800px) {
@@ -84,24 +84,28 @@ img {
   }
 }
 
-.bg-shape-container {
-  position: absolute;
-  top: 76%;
-  z-index: 1;
-}
-
 .bg-shape {
-  position: relative;
-  pointer-events: none;
-  min-width: 101vw;
-}
-
-/*
-.shape {
-  z-index: 1;
-  width: 100vw;
-  max-width: 100%;
   position: absolute;
-  top: 780px;
+  z-index: 3;
+  width: 110vw;
+  max-width: 110%;
+  margin-left: -150px;
+  overflow-x: hidden;
+  top: 1300px;
+
+  @media (max-width: 1400px) {
+    top: 1300px;
+  }
+
+  @media (max-width: 1200px) {
+    top: 1300px;
+  }
+
+  @media (max-width: 1200px) {
+    top: 1100px;
+  }
+
+  @media (max-width: 600px) {
+    top: 1300px;
+  }
 }
-*/

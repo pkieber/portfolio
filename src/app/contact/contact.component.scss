@@ -1,18 +1,14 @@
 .contact-content {
-  padding: 60px 120px 60px 120px;
   width: 100%;
   box-sizing: border-box;
+  padding-inline: clamp(1.5625rem, -1.0156rem + 6.875vw, 5rem); /* 80px @1400 + 25px @350 - padding-left + padding-right */
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background-color: #141D2F; /* Overwrites HTML-bg */
 
   @media (max-width: 1400px) {
-    padding: 60px 80px 60px 80px;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 60px 50px 60px 50px;
-  }
-
-  @media (max-width: 600px) {
-    padding: 60px 25px 60px 25px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -20,6 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 4;
   margin-bottom: 40px;
 }
 
@@ -35,10 +32,11 @@ h2 {
 h2:after {
   content: "";
   height: 6px;
-  width: 250px;
+  width: clamp(8.125rem, 0.2083rem + 36.1905vw, 31.875rem); /* 510px @1400 + 130px @350 */
   background: #00BEE8;
   position: absolute;
   right: -100px; /* adapt to margin-right */
+  overflow-x: hidden;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -114,6 +112,7 @@ button {
   bottom: 100px;
   bottom: -150px;
   right: -130px;
+  overflow-x: hidden;
   z-index: -1;
   width: 100%;
 

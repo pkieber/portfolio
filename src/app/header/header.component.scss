@@ -3,19 +3,24 @@ header {
     flex-direction: column;
     align-items: center;
     z-index: 1;
-    padding: 120px 120px 60px 120px;
+    padding-inline: clamp(1.5625rem, -1.0156rem + 6.875vw, 5rem); /* 80px @1400 + 25px @350 - padding-left+right */
+    padding-top: 120px;
+    padding-bottom: 60px;
     background-color: #141D2F; /* Overwrites HTML-bg */
 
     @media (max-width: 1400px) {
-      padding: 120px 80px 100px 80px;
+      padding-top: 120px;
+      padding-bottom: 100px;
     }
 
     @media (max-width: 1200px) {
-      padding: 120px 50px 80px 50px;
+      padding-top: 120px;
+      padding-bottom: 80px;
     }
 
     @media (max-width: 600px) {
-      padding: 120px 25px 60px 25px;
+      padding-top: 120px;
+      padding-bottom: 60px;
       gap: 50px;
     }
 
@@ -112,7 +117,8 @@ header {
   width: 180px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 0px 0px 180px;
+  /* padding: 0px 0px 0px 180px; */
+  padding-left: clamp(5.3125rem, 0.8594rem + 11.875vw, 11.25rem);
   position: relative;
   display: flex;
   align-items: center;
@@ -131,24 +137,12 @@ header {
         transform: scale(1.2);
       }
   }
-
-  @media (max-width: 1400px) {
-    padding: 0px 0px 0px 140px;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 0px 0px 0px 110px;
-  }
-
-  @media (max-width: 600px) {
-    padding: 0px 0px 0px 85px;
-  }
 }
 
 .header-social:before {
   content: "";
   height: 6px;
-  width: 80px;
+  width: clamp(3.75rem, 2.7083rem + 4.7619vw, 6.875rem); /* 110px @1400 + 60px @350px */
   background: #00BEE8;
   position: absolute;
   left: 0; /* adapt to margin-left */
@@ -167,6 +161,7 @@ header {
   position: absolute;
   right: 0;
   top: -50px;
+  padding-right: clamp(1.25rem, -1.2234rem + 4.2553vw, 2.5rem); /* 40px @1400 + 20px @930 */
   display: flex;
   align-items: center;
   flex-direction: column;

@@ -1,18 +1,14 @@
 .skills-content {
-  padding: 60px 120px 60px 120px;
   width: 100%;
   box-sizing: border-box;
+  padding-inline: clamp(1.5625rem, -1.0156rem + 6.875vw, 5rem); /* 80px @1400 + 25px @350 - padding-left+right */
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background-color: #141D2F; /* Overwrites HTML-bg */
 
   @media (max-width: 1400px) {
-    padding: 60px 80px 60px 80px;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 60px 50px 60px 50px;
-  }
-
-  @media (max-width: 600px) {
-    padding: 60px 25px 60px 25px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -27,12 +23,17 @@ h2 {
 h2:after {
   content: "";
   height: 6px;
-  width: 250px;
+  width: clamp(11.25rem, 8.5417rem + 12.381vw, 19.375rem); /* 310px @1400 + 180px @350px */
   background: #1CE6B6;
   position: absolute;
-  right: -100px; /* adapt to margin-right */
+  overflow-x: hidden;
+  right: -200px; /* adapt to margin-right */
   top: 50%;
   transform: translateY(-50%);
+
+  @media (max-width: 800px) {
+    width: clamp(17.5rem, 2.9167rem + 66.6667vw, 36.25rem); /* 580px @800 + 280px @350px */
+  }
 }
 
 .skills-container {
