@@ -9,7 +9,7 @@
     justify-content: space-between;
     padding-inline: clamp(1.5625rem, -1.0156rem + 6.875vw, 5rem); /* 80px @1400 + 25px @350 - padding-left+right */
     box-sizing: border-box;
-    background-color: #141D2F; /* Overwrites HTML-bg */
+    background-color: var(--darkBlue);
 
     a {
         color: white;
@@ -20,11 +20,11 @@
 
         &:hover {
           filter: brightness(0.8);
-          color: #00BEE8;
+          color: var(--lightBlue);
         }
 
         &:focus {
-          color: #095a6c;
+          color: var(--green);
         }
     }
 
@@ -80,7 +80,7 @@
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  color: var(--grey);
 }
 
 .overlay .closebtn {

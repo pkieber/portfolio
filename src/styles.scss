@@ -1,3 +1,10 @@
+:root {
+  --darkBlue: #141D2F;
+  --purple: #4B47FF;
+  --lightBlue: #00BEE8;
+  --green: #1CE6B6;
+  --grey: #FFFFFF;
+}
 
 html, body {
     scroll-behavior: smooth;
@@ -5,30 +12,22 @@ html, body {
 }
 
 html {
-    background-color: #141D2F;
+    background-color: var(--darkBlue);
 }
 
 body {
     margin: 0px;
-    color: #FFFFFF;
+    color: var(--grey);
     /*max-width: 1920px;*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     user-select: none;
-
-}
-
-:root {
-    --primary: #141D2F;
-    --secondary: #4B47FF;
-    --tertiary: #1CE6B6;
-    --quarternary: #101623;
 }
 
 button {
-    background-color: #00BEE8;
-    color: #FFFFFF;
+    background-color: var(--lightBlue);
+    color: var(--grey);
     height: 58px;
     font-weight: 400;
     font-size: 23px;
@@ -139,7 +138,7 @@ button {
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #4B47FF;
+    background-color: var(--purple);
     border-radius: 10px;
     border: 0.5px solid rgb(27, 25, 75);
 }

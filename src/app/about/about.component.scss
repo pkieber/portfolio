@@ -4,7 +4,6 @@
   padding-inline: clamp(1.5625rem, -1.0156rem + 6.875vw, 5rem); /* 80px @1400 + 25px @350 - padding-left + padding-right */
   padding-top: 120px;
   padding-bottom: 60px;
-  background-color: #141D2F; /* Overwrites HTML-bg */
 
   @media (max-width: 1400px) {
     padding-top: 60px;

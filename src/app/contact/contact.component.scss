@@ -4,7 +4,6 @@
   padding-inline: clamp(1.5625rem, -1.0156rem + 6.875vw, 5rem); /* 80px @1400 + 25px @350 - padding-left + padding-right */
   padding-top: 120px;
   padding-bottom: 60px;
-  background-color: #141D2F; /* Overwrites HTML-bg */
 
   @media (max-width: 1400px) {
     padding-top: 60px;
@@ -33,7 +32,7 @@ h2:after {
   content: "";
   height: 6px;
   width: clamp(8.125rem, 0.2083rem + 36.1905vw, 31.875rem); /* 510px @1400 + 130px @350 */
-  background: #00BEE8;
+  background:  var(--lightBlue);
   position: absolute;
   right: -100px; /* adapt to margin-right */
   overflow-x: hidden;
@@ -77,7 +76,7 @@ input, textarea {
   background-color: #1e2b45;
   border-radius: 10px;
   padding: 10px;
-  border: 2px solid #4B47FF;
+  border: 2px solid var(--purple);
   outline: none;
   transition: all 225ms ease-in-out;
   cursor: pointer;
@@ -102,7 +101,7 @@ button {
   transition: all 225ms ease-in-out;
 
   &:hover {
-    background-color: #4B47FF;
+    background-color: var(--purple);
     transform: scale(1.2);
   }
 }
@@ -145,12 +144,12 @@ button {
   background-position: center;
   box-sizing: content-box;
   padding: 10px;
-  border: 2px solid white;
+  border: 2px solid var(--grey);
   border-radius: 100%;
   transition: all 225ms ease-in-out;
 }
 
 .arrow-up:hover {
   background-image: url('../../assets/icon/arrow-up-hover.png');
-  border: 2px solid #00BEE8;
+  border: 2px solid var(--lightBlue);
 }
