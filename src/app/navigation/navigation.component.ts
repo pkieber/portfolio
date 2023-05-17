@@ -6,8 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+  isNavOpen = false;
 
-  openNav(): void {
+  toggleNav() {
+    this.isNavOpen = !this.isNavOpen;
+
+    if (this.isNavOpen) {
+      this.openNav();
+    } else {
+      this.closeNav();
+    }
+  }
+
+  openNav() {
     const mobileNav = document.getElementById("mobileNav") as HTMLElement;
     mobileNav.style.width = "100%";
   }
@@ -15,5 +26,6 @@ export class NavigationComponent {
   closeNav(): void {
     const mobileNav = document.getElementById("mobileNav") as HTMLElement;
     mobileNav.style.width = "0%";
+    this.isNavOpen = false;
   }
 }

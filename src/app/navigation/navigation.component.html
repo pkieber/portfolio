@@ -5,11 +5,17 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
     </nav>
+
     <div class="mobile-show">
-      <img (click)="openNav()" src="assets/icon/menu.png">
+      <button id="nav-icon" [class.open]="isNavOpen" (click)="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div id="mobileNav" class="overlay mobile-show">
-      <img class="nav-mobile-btn" (click)="closeNav()" src="assets/icon/close.png">
+
+    <div id="mobileNav" class="overlay" [class.mobile-show]="isNavOpen">
       <div class="overlay-content">
         <a (click)="closeNav()" href="#about">About</a>
         <a (click)="closeNav()" href="#skills">Skills</a>
