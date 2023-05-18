@@ -55,20 +55,18 @@ h2 {
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
   display: block; /* remove extra space below image */
   z-index: 2;
 }
 
 .about-profile {
-  height: 100%;
+  height: clamp(25rem, 19.7917rem + 23.8095vw, 40.625rem);
 }
 
 .bg-about {
   display: flex;
   position: absolute;
-  /* right: -250px; */
+  right: -250px;
   overflow-x: hidden;
   z-index: 1;
 
@@ -84,27 +82,31 @@ img {
 }
 
 .bg-shape {
-  position: absolute;
-  z-index: 3;
-  width: 110vw;
-  max-width: 110%;
-  margin-left: -150px;
-  overflow-x: hidden;
-  top: 1300px;
+  display: none;
 
-  @media (max-width: 1400px) {
-    top: 1300px;
+  @media (max-width: 1600px) {
+    display: unset;
+    position: absolute;
+    z-index: 3;
+    width: 110%;
+    overflow-x: hidden;
+    margin-left: -150px;
+    margin-top: clamp(13.75rem, 18.136rem + -8.761vw, 9.375rem); /* 150px @1600 + 220px @801 */
   }
 
-  @media (max-width: 1200px) {
-    top: 1300px;
+  @media (max-width: 1500px) {
+    width: 120%;
   }
 
-  @media (max-width: 1200px) {
-    top: 1100px;
+  @media (max-width: 1300px) {
+    width: 130%;
   }
 
-  @media (max-width: 600px) {
-    top: 1300px;
+  @media (max-width: 1000px) {
+    width: 140%;
+  }
+
+  @media (max-width: 800px) {
+    display: none;
   }
 }
