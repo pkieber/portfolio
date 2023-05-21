@@ -1,9 +1,9 @@
 <div class="nav-container">
     <img routerLink="/" src="assets/img/logo.png">
-    <nav class="mobile-hide">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+    <nav class="mobile-hide active-link">
+      <a href="#about" [class.active]="currentSection === 'about'" (click)="setActiveSection('about')">About</a>
+      <a href="#skills" [class.active]="currentSection === 'skills'" (click)="setActiveSection('skills')">Skills</a>
+      <a href="#projects" [class.active]="currentSection === 'projects'" (click)="setActiveSection('projects')">Projects</a>
     </nav>
 
     <div class="mobile-show">

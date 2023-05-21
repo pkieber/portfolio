@@ -66,18 +66,16 @@ img {
 .bg-about {
   display: flex;
   position: absolute;
-  right: -250px;
+  right: 0;
   overflow-x: hidden;
   z-index: 1;
 
   @media (max-width: 800px) {
     margin-bottom: 400px;
-    margin-right: 400px;
   }
 
   @media (max-width: 600px) {
     margin-bottom: 600px;
-    margin-right: 500px;
   }
 }
 
@@ -88,25 +86,25 @@ img {
     display: unset;
     position: absolute;
     z-index: 3;
-    width: 110%;
+    width: 100%;
+    right: 0;
     overflow-x: hidden;
     margin-left: -150px;
-    margin-top: clamp(13.75rem, 18.136rem + -8.761vw, 9.375rem); /* 150px @1600 + 220px @801 */
-  }
-
-  @media (max-width: 1500px) {
-    width: 120%;
-  }
-
-  @media (max-width: 1300px) {
-    width: 130%;
-  }
-
-  @media (max-width: 1000px) {
-    width: 140%;
+    margin-top: clamp(19.375rem, 23.1344rem + -7.5094vw, 15.625rem); /* 250px @1600 + 310px @801 */
   }
 
   @media (max-width: 800px) {
     display: none;
+  }
+}
+
+.bg-shape-mobile {
+  display: none;
+
+  @media (max-width: 800px) {
+    display: unset;
+    margin-top: -70px;
+    position: absolute;
+    right: 0;
   }
 }

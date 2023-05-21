@@ -12,7 +12,7 @@
     background-color: var(--darkBlue);
 
     a {
-        color: white;
+        color: var(--grey);
         text-decoration: none;
         margin-left: 32px;
         font-weight: 500;
@@ -36,6 +36,10 @@
           height: 25px;
         }
     }
+}
+
+.active {
+  border-bottom: 3px solid var(--grey);
 }
 
 .mobile-hide {
