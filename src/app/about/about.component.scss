@@ -71,11 +71,12 @@ img {
   z-index: 1;
 
   @media (max-width: 800px) {
-    margin-bottom: 400px;
+    margin-bottom: 500px;
+    height: 600px;
   }
 
   @media (max-width: 600px) {
-    margin-bottom: 600px;
+    margin-bottom: 650px;
   }
 }
 
@@ -99,12 +100,7 @@ img {
 }
 
 .bg-shape-mobile {
-  display: none;
-
   @media (max-width: 800px) {
-    display: unset;
-    margin-top: -70px;
-    position: absolute;
-    right: 0;
+    clip-path: circle(75% at 38% 0%);
   }
 }
