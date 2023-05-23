@@ -29,9 +29,17 @@ header {
       margin-top: 30px;
       transition: all 225ms ease-in-out;
 
+      @media (max-width: 600px) {
+        width: 140px;
+      }
+
       &:hover {
         background-color: var(--purple);
         transform: scale(1.2);
+
+        @media (max-width: 500px) {
+          transform: scale(1.1);
+        }
       }
     }
 }
@@ -39,9 +47,12 @@ header {
 .bg-header {
   width: 100%;
   position: absolute;
-  top: 100px;
   top: 5%;
   z-index: 1;
+
+  @media (max-width: 600px) {
+    height: 400px;
+  }
 }
 
 .header-content {

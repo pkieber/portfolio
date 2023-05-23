@@ -6,7 +6,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  sent = false;
+  messageSent = false;
 
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
@@ -30,7 +30,7 @@ export class ContactComponent {
     this.enableInputFields(nameField, emailField, messageField, sendButton);
     this.resetInputFields(nameField, emailField, messageField);
     setTimeout(() => {
-      this.sent = false;
+      this.messageSent = false;
     }, 3000);
   }
 
@@ -69,7 +69,7 @@ export class ContactComponent {
       method: 'POST',
       body: formData
     });
-    this.sent = true;
+    this.messageSent = true;
   }
 
 

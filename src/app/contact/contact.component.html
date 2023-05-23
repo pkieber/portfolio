@@ -13,7 +13,9 @@
           <input required type="text" name="name" placeholder="Your name" #nameField>
           <input required type="email" name="email" placeholder="Your email" #emailField>
           <textarea required type="text" name="message" placeholder="Your message" #messageField></textarea>
-          <button #sendButton>Send message</button>
+          <button [disabled]="messageSent" #sendButton>
+            {{ messageSent ? 'Message sent' : 'Send message :)' }}
+          </button>
           <img class="bg-contact" src="assets/bg/shadow-footer.png">
         </form>
     </div>

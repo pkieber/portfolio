@@ -64,7 +64,6 @@
   z-index: 1;
   top: 80px; /* height navbar */
   right: 0;
-  /*background-color: rgb(0, 190, 232, 0.97);*/
   background-color: rgb(20, 29, 47, 0.96);
   overflow: hidden;
   transition: 0.5s;
@@ -123,10 +122,10 @@
 }
 
 #nav-icon {
-  width: 50px;
+  width: 40px;
   height: 45px;
   position: absolute;
-  top: 20px;
+  top: 24px;
   right: 20px;
   cursor: pointer;
 }
@@ -134,7 +133,7 @@
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: var(--grey);
   border-radius: 9px;
@@ -149,11 +148,11 @@
 
 #nav-icon span:nth-child(2),
 #nav-icon span:nth-child(3) {
-  top: 18px;
+  top: 14px;
 }
 
 #nav-icon span:nth-child(4) {
-  top: 36px;
+  top: 28px;
 }
 
 #nav-icon.open span:nth-child(1) {

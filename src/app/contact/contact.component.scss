@@ -111,6 +111,10 @@ button {
   &:hover {
     background-color: var(--purple);
     transform: scale(1.2);
+
+    @media (max-width: 500px) {
+      transform: scale(1.1);
+    }
   }
 }
 
