@@ -6,59 +6,20 @@
       Please find below some of my work. I use different technologies and libraries to give you an overview of my skills. Feel free to click and try it out.
       Also check out this website which is made with Angular. Happy surfing and do not hesitate to leave me a comment. Your feedback is highly appreciated.
     </p>
+
     <div class="project-container">
-      <div class="project-box">
+      <div class="project-box" *ngFor="let project of projects">
         <div class="project-btn-container hidden-info">
-          <a href="https://github.com/pkieber/pollo-loco" target="_blank"><button class="btn-github">Github</button></a>
-          <a href="https://patrick-kieber.developerakademie.net/pollo-loco/" target="_blank"><button class="btn-test">Live test</button></a>
+          <a [href]="project.githubLink" target="_blank"><button class="btn-github">Github</button></a>
+          <a [href]="project.liveTestLink" target="_blank"><button class="btn-test">Live test</button></a>
         </div>
         <div class="project-info-container hidden-info">
-          <h3 class="project-title">El Pollo Loco</h3>
-          <p class="project-intro">A jump and run game to showcase object-oriented programming and the use of Canvas API for drawing 2D graphics.</p>
-          <p class="project-info">JavaScript | HTML | CSS</p>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-intro">{{ project.intro }}</p>
+          <p class="project-info">{{ project.info }}</p>
         </div>
-        <img src="assets/img/project-polloloco.png">
+        <img [src]="project.imageSrc">
       </div>
-
-      <div class="project-box">
-        <div class="project-btn-container hidden-info">
-          <a href="https://github.com/pkieber/kanban" target="_blank"><button class="btn-github">Github</button></a>
-          <a href="https://patrick-kieber.developerakademie.net/join-kanban/index.html" target="_blank"><button class="btn-test">Live test</button></a>
-        </div>
-        <div class="project-info-container hidden-info">
-          <h3 class="project-title">Join - Kanbas Tool</h3>
-          <p class="project-intro">This project management tool offers a user login, a kanban board with drag and drop, a contact list and a summary page.</p>
-          <p class="project-info">JavaScript | HTML | CSS</p>
-        </div>
-        <img src="assets/img/project-kanban.png">
-      </div>
-
-      <div class="project-box">
-        <div class="project-btn-container hidden-info">
-          <a href="https://github.com/pkieber/pokedex" target="_blank"><button class="btn-github">Github</button></a>
-          <a href="https://patrick-kieber.developerakademie.net/pokedex/index.html" target="_blank"><button class="btn-test">Live test</button></a>
-        </div>
-        <div class="project-info-container hidden-info">
-          <h3 class="project-title">Pokedex</h3>
-          <p class="project-intro">This website fetches Pokemon stats from the Poke API. Large amounts of data are sorted and presented in a clear structure.</p>
-          <p class="project-info">JavaScript | HTML | CSS | Rest API</p>
-        </div>
-        <img src="assets/img/project-pokedex.png">
-      </div>
-
-      <div class="project-box">
-        <div class="project-btn-container hidden-info">
-          <a href="https://github.com/pkieber/ringoffire" target="_blank"><button class="btn-github">Github</button></a>
-          <a href="https://ring-of-fire-aedc9.web.app" target="_blank"><button class="btn-test">Life test</button></a>
-        </div>
-        <div class="project-info-container hidden-info">
-          <h3 class="project-title">Ring of Fire</h3>
-          <p class="project-intro">A card game which is integrated with Google's Firestore database to allow sharing data among different parties in real-time.</p>
-          <p class="project-info">Angular | TypeScript | HTML | SCSS | Firebase</p>
-        </div>
-        <img src="assets/img/project-ringoffire.png">
-      </div>
-
     </div>
 
 </section>
