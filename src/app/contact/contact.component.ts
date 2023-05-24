@@ -1,3 +1,4 @@
+import { Input } from '@angular/core';
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
@@ -6,6 +7,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  @Input() noName = false;
+  @Input() noEmail = false;
+  @Input() noMessage = false;
   messageSent = false;
   errorMessage: string | null = null;
   successMessage: string | null = null;
@@ -18,9 +22,33 @@ export class ContactComponent {
 
 
   /**
+   * Sets the flag indicating that the name field is empty.
+   */
+  emptyNameField(): void {
+    this.noName = true;
+  }
+
+
+  /**
+   * Sets the flag indicating that the email field is empty.
+   */
+  emptyEmailField(): void {
+    this.noEmail = true;
+  }
+
+
+  /**
+   * Sets the flag indicating that the message field is empty.
+   */
+  emptyMessageField(): void {
+    this.noMessage = true;
+  }
+
+
+  /**
    * Sends the email by collecting the form data and sending it to the server.
    */
-  async sendMail() {
+  async sendMail(): Promise<void> {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;

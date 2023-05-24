@@ -10,9 +10,15 @@
     </div>
     <div class="contact-box">
         <form class="contact-right-box" (submit)="sendMail()" ngNativeValidate #myForm>
-          <input required type="text" name="name" placeholder="Your name" #nameField>
-          <input required type="email" name="email" placeholder="Your email" #emailField>
-          <textarea required type="text" name="message" placeholder="Your message" #messageField></textarea>
+          <input required type="text" name="name" placeholder="Your name"
+              [class.redborder-error]="noName" (invalid)="emptyNameField()" (input)="noName=false" #nameField>
+              <span *ngIf="noName">Your name is required.</span>
+          <input required type="email" name="email" placeholder="Your email"
+              [class.redborder-error]="noEmail" (invalid)="emptyEmailField()" (input)="noEmail=false" #emailField>
+              <span *ngIf="noEmail">Your email is required.</span>
+          <textarea required type="text" name="message" placeholder="Your message"
+              [class.redborder-error]="noMessage" (invalid)="emptyMessageField()" (input)="noMessage=false" #messageField></textarea>
+              <span *ngIf="noMessage">Your message is empty.</span>
           <button [disabled]="messageSent" #sendButton>
             {{ messageSent ? 'Message sent' : 'Send message :)' }}
           </button>

@@ -25,7 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     ImprintComponent,
     NavigationComponent,
-    MainpageComponent
+    MainpageComponent,
   ],
   imports: [
     BrowserModule,

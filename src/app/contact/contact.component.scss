@@ -73,6 +73,12 @@ form {
   gap: 20px;
   width: 100%;
   position: relative;
+
+  span {
+    color: red;
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 input, textarea {
@@ -168,8 +174,16 @@ button {
 
 .error-message {
   color: red;
+  z-index: 5;
+  font-size: 14px;
 }
 
 .success-message {
   color: green;
+  z-index: 5;
+  font-size: 14px;
+}
+
+.redborder-error {
+  border: solid 1px red !important;
 }
