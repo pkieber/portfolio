@@ -7,6 +7,8 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 })
 export class ContactComponent {
   messageSent = false;
+  errorMessage: string | null = null;
+  successMessage: string | null = null;
 
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
@@ -26,18 +28,59 @@ export class ContactComponent {
     this.disableInputFields(nameField, emailField, messageField, sendButton);
     let formData = new FormData();
     this.appendFormData(formData, nameField, emailField, messageField);
-    await this.sendToServer(formData);
+    try {
+      await this.sendToServer(formData);
+      this.handleSuccess();
+    } catch (error) {
+      this.handleError();
+    }
     this.enableInputFields(nameField, emailField, messageField, sendButton);
     this.resetInputFields(nameField, emailField, messageField);
-    setTimeout(() => {
-      this.messageSent = false;
-    }, 3000);
   }
 
 
   /**
-  * Disables input fields.
+  * Handles the success scenario after sending the email.
   */
+  handleSuccess() {
+    this.messageSent = true;
+    this.errorMessage = null; // Clear any previous error messages.
+    this.successMessage = 'Message sent successfully!';
+    this.clearMessagesAfterDelay(3000);
+  }
+
+
+  /**
+  * Handles the error scenario while sending the email.
+  */
+  handleError() {
+    console.error('Failed to send email');
+    this.errorMessage = 'Failed to send the contact form. Please try again later.';
+    this.successMessage = null; // Clear any previous success messages.
+    this.clearMessagesAfterDelay(3000);
+  }
+
+
+  /**
+   * Clears the messages (successMessage and errorMessage) after a specified delay.
+   * @param delay The delay in milliseconds before clearing the messages.
+   */
+  clearMessagesAfterDelay(delay: number) {
+    setTimeout(() => {
+      this.messageSent = false;
+      this.errorMessage = null;
+      this.successMessage = null;
+    }, delay);
+  }
+
+
+  /**
+   * Disables input fields.
+   * @param nameField
+   * @param emailField
+   * @param messageField
+   * @param sendButton
+   */
   disableInputFields(nameField: any, emailField: any, messageField: any, sendButton: any){
     nameField.disabled = true;
     emailField.disabled = true;
@@ -75,6 +118,10 @@ export class ContactComponent {
 
   /**
   * Enables input fields.
+  * @param nameField
+  * @param emailField
+  * @param messageField
+  * @param sendButton
   */
   enableInputFields(nameField: any, emailField: any, messageField: any, sendButton: any){
     nameField.disabled = false;

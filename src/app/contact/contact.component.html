@@ -5,7 +5,7 @@
       <div class="contact-left-box">
         <h3>Got a problem to solve?</h3>
         <p>I am open for new challenges and eager to contribute to the success of your projects. Just get in touch with me!</p>
-        <p>Btw, I do not offer a bug bounty program, but I'm always happy to receive some feedback nevertheless. :)</p>
+        <p>Btw, I do not offer a bug bounty program, but I'm always happy to receive some feedback nevertheless.</p>
       </div>
     </div>
     <div class="contact-box">
@@ -16,6 +16,8 @@
           <button [disabled]="messageSent" #sendButton>
             {{ messageSent ? 'Message sent' : 'Send message :)' }}
           </button>
+          <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+          <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
           <img class="bg-contact" src="assets/bg/shadow-footer.png">
         </form>
     </div>
