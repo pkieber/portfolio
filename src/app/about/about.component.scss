@@ -28,7 +28,7 @@ h2 {
     justify-content: center;
     display: flex;
     flex-direction: column-reverse;
-    gap: 80px;
+    gap: 60px;
   }
 }
 
@@ -101,6 +101,6 @@ img {
 
 .bg-shape-mobile {
   @media (max-width: 800px) {
-    clip-path: circle(75% at 38% 0%);
+    clip-path: circle(75% at 38% 15%);
   }
 }

@@ -87,7 +87,8 @@
 }
 
 .overlay a:hover, .overlay a:focus {
-  color: var(--grey);
+  filter: brightness(0.8);
+  color: var(--lightBlue);
 }
 
 .overlay .closebtn {

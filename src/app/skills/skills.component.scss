@@ -115,6 +115,10 @@ button {
           height: 90px;
         }
 
+        @media (max-width: 400px) {
+          height: 80px;
+        }
+
         &:hover {
           animation: shake 0.5s;
           animation-iteration-count: infinite;
